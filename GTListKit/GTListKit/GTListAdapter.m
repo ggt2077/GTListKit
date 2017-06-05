@@ -10,4 +10,13 @@
 
 @implementation GTListAdapter
 
+- (instancetype)initWithUpdater:updatingDelegate
+                 viewController:(nullable UIViewController *)viewController
+               workingRangeSize:(NSInteger)workingRangeSize {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
 @end
