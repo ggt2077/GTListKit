@@ -17,6 +17,7 @@
 		37A7FEBD1EE545F10031F7B5 /* GTListKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A7FEBC1EE545F10031F7B5 /* GTListKitUITests.m */; };
 		37A7FECD1EE546FD0031F7B5 /* GTListCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A7FECC1EE546FD0031F7B5 /* GTListCollectionView.m */; };
 		37A7FED41EE5504B0031F7B5 /* GTListAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A7FED31EE5504B0031F7B5 /* GTListAdapter.m */; };
+		37E1CFCA1EE6B13300FEFF5E /* GTListAdapterProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E1CFC91EE6B13300FEFF5E /* GTListAdapterProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,11 @@
 		37A7FECE1EE54B500031F7B5 /* GTListMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListMacros.h; sourceTree = "<group>"; };
 		37A7FED21EE5504B0031F7B5 /* GTListAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTListAdapter.h; sourceTree = "<group>"; };
 		37A7FED31EE5504B0031F7B5 /* GTListAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTListAdapter.m; sourceTree = "<group>"; };
+		37E1CFC41EE650FD00FEFF5E /* GTListAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListAssert.h; sourceTree = "<group>"; };
+		37E1CFC61EE681A700FEFF5E /* GTListUpdatingDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListUpdatingDelegate.h; sourceTree = "<group>"; };
+		37E1CFC71EE6964B00FEFF5E /* GTListAdapterInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListAdapterInternal.h; sourceTree = "<group>"; };
+		37E1CFC81EE6B13300FEFF5E /* GTListAdapterProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTListAdapterProxy.h; sourceTree = "<group>"; };
+		37E1CFC91EE6B13300FEFF5E /* GTListAdapterProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTListAdapterProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,10 +158,15 @@
 			isa = PBXGroup;
 			children = (
 				37A7FECE1EE54B500031F7B5 /* GTListMacros.h */,
+				37E1CFC41EE650FD00FEFF5E /* GTListAssert.h */,
+				37E1CFC61EE681A700FEFF5E /* GTListUpdatingDelegate.h */,
 				37A7FECB1EE546FD0031F7B5 /* GTListCollectionView.h */,
 				37A7FECC1EE546FD0031F7B5 /* GTListCollectionView.m */,
 				37A7FED21EE5504B0031F7B5 /* GTListAdapter.h */,
 				37A7FED31EE5504B0031F7B5 /* GTListAdapter.m */,
+				37E1CFC71EE6964B00FEFF5E /* GTListAdapterInternal.h */,
+				37E1CFC81EE6B13300FEFF5E /* GTListAdapterProxy.h */,
+				37E1CFC91EE6B13300FEFF5E /* GTListAdapterProxy.m */,
 			);
 			path = GTListKit;
 			sourceTree = "<group>";
@@ -301,6 +312,7 @@
 				37A7FE9C1EE545F10031F7B5 /* AppDelegate.m in Sources */,
 				37A7FE991EE545F10031F7B5 /* main.m in Sources */,
 				37A7FECD1EE546FD0031F7B5 /* GTListCollectionView.m in Sources */,
+				37E1CFCA1EE6B13300FEFF5E /* GTListAdapterProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +550,7 @@
 				37A7FEC31EE545F10031F7B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37A7FEC41EE545F10031F7B5 /* Build configuration list for PBXNativeTarget "GTListKitTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +559,7 @@
 				37A7FEC61EE545F10031F7B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37A7FEC71EE545F10031F7B5 /* Build configuration list for PBXNativeTarget "GTListKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +568,7 @@
 				37A7FEC91EE545F10031F7B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

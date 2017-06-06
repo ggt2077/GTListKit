@@ -9,8 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "GTListMacros.h"
 
+@protocol GTListUpdatingDelegate;
+@class GTListCollectionView;
+
+NS_ASSUME_NONNULL_BEGIN
+
 GTLK_SUBCLASSING_RESTRICTED
 @interface GTListAdapter : NSObject
+
+
+@property (nonatomic, nullable, weak) UIViewController *viewController;
+
+@property (nonatomic, nullable, weak) GTListCollectionView *collectionView;
+
 
 /**
  初始构造器
@@ -18,8 +29,10 @@ GTLK_SUBCLASSING_RESTRICTED
  @param viewController 控制器
  @return 实例对象
  */
-- (instancetype)initWithUpdater:updatingDelegate
+- (instancetype)initWithUpdater:(id <GTListUpdatingDelegate>)updatingDelegate
                  viewController:(nullable UIViewController *)viewController
                workingRangeSize:(NSInteger)workingRangeSize NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END
