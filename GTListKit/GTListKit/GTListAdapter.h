@@ -10,6 +10,7 @@
 #import "GTListMacros.h"
 
 @protocol GTListUpdatingDelegate;
+@protocol GTListAdapterDataSource;
 @class GTListCollectionView;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,6 +22,8 @@ GTLK_SUBCLASSING_RESTRICTED
 @property (nonatomic, nullable, weak) UIViewController *viewController;
 
 @property (nonatomic, nullable, weak) GTListCollectionView *collectionView;
+
+@property (nonatomic, nullable, weak) id <GTListAdapterDataSource> dataSource;
 
 
 /**

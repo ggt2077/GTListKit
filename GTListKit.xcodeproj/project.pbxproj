@@ -18,6 +18,7 @@
 		37A7FECD1EE546FD0031F7B5 /* GTListCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A7FECC1EE546FD0031F7B5 /* GTListCollectionView.m */; };
 		37A7FED41EE5504B0031F7B5 /* GTListAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A7FED31EE5504B0031F7B5 /* GTListAdapter.m */; };
 		37E1CFCA1EE6B13300FEFF5E /* GTListAdapterProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E1CFC91EE6B13300FEFF5E /* GTListAdapterProxy.m */; };
+		37E676A11EE811C9009899E2 /* GTListSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E676A01EE811C9009899E2 /* GTListSectionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3782F6D51EE7D42E0026DEA2 /* GTListAdapterDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListAdapterDataSource.h; sourceTree = "<group>"; };
+		3782F6D61EE7D7BF0026DEA2 /* GTListDiffable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListDiffable.h; sourceTree = "<group>"; };
 		37A7FE941EE545F10031F7B5 /* GTListKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTListKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A7FE981EE545F10031F7B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37A7FE9A1EE545F10031F7B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +67,10 @@
 		37E1CFC71EE6964B00FEFF5E /* GTListAdapterInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListAdapterInternal.h; sourceTree = "<group>"; };
 		37E1CFC81EE6B13300FEFF5E /* GTListAdapterProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTListAdapterProxy.h; sourceTree = "<group>"; };
 		37E1CFC91EE6B13300FEFF5E /* GTListAdapterProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTListAdapterProxy.m; sourceTree = "<group>"; };
+		37E6769E1EE80C64009899E2 /* GTListSectionType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListSectionType.h; sourceTree = "<group>"; };
+		37E6769F1EE811C9009899E2 /* GTListSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTListSectionController.h; sourceTree = "<group>"; };
+		37E676A01EE811C9009899E2 /* GTListSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTListSectionController.m; sourceTree = "<group>"; };
+		37E676A51EE8153A009899E2 /* GTListCollectionContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListCollectionContext.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +167,14 @@
 				37A7FECE1EE54B500031F7B5 /* GTListMacros.h */,
 				37E1CFC41EE650FD00FEFF5E /* GTListAssert.h */,
 				37E1CFC61EE681A700FEFF5E /* GTListUpdatingDelegate.h */,
+				3782F6D51EE7D42E0026DEA2 /* GTListAdapterDataSource.h */,
+				3782F6D61EE7D7BF0026DEA2 /* GTListDiffable.h */,
+				37E6769E1EE80C64009899E2 /* GTListSectionType.h */,
+				37E676A51EE8153A009899E2 /* GTListCollectionContext.h */,
 				37A7FECB1EE546FD0031F7B5 /* GTListCollectionView.h */,
 				37A7FECC1EE546FD0031F7B5 /* GTListCollectionView.m */,
+				37E6769F1EE811C9009899E2 /* GTListSectionController.h */,
+				37E676A01EE811C9009899E2 /* GTListSectionController.m */,
 				37A7FED21EE5504B0031F7B5 /* GTListAdapter.h */,
 				37A7FED31EE5504B0031F7B5 /* GTListAdapter.m */,
 				37E1CFC71EE6964B00FEFF5E /* GTListAdapterInternal.h */,
@@ -308,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A7FE9F1EE545F10031F7B5 /* ViewController.m in Sources */,
+				37E676A11EE811C9009899E2 /* GTListSectionController.m in Sources */,
 				37A7FED41EE5504B0031F7B5 /* GTListAdapter.m in Sources */,
 				37A7FE9C1EE545F10031F7B5 /* AppDelegate.m in Sources */,
 				37A7FE991EE545F10031F7B5 /* main.m in Sources */,

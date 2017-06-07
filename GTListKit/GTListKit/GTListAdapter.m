@@ -11,6 +11,7 @@
 #import "GTListUpdatingDelegate.h"
 #import "GTListAdapterInternal.h"
 #import "GTListCollectionView.h"
+#import "GTListAdapterDataSource.h"
 
 @implementation GTListAdapter
 
@@ -33,18 +34,9 @@
     return self;
 }
 
-#pragma mark - UICollectionViewDataSource
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 10;
+- (GTListCollectionView *)collectionView {
+    return (GTListCollectionView *)_collectionView;
 }
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
-}
-
-
-#pragma mark -  Setter
 
 - (void)setCollectionView:(GTListCollectionView *)collectionView {
     GTAssertMainThread();
@@ -59,13 +51,52 @@
         
         _collectionView = collectionView;
         _collectionView.dataSource = self;
+        
+        [self p_updateCollectionViewDelegate];
+        [self p_updateAfterPublicSettingsChange];
     }
 }
 
-#pragma mark -  Getter
 
-- (GTListCollectionView *)collectionView {
-    return (GTListCollectionView *)_collectionView;
+/**
+ 更新CollectionViewDelegate
+ */
+- (void)p_updateCollectionViewDelegate {
+    // set up the delegate to the proxy so the adapter can intercept evnets
+    // default to the adapter simply being the delegate
+    _collectionView.delegate = (id<UICollectionViewDelegate>)self.delegateProxy ?: self;
+}
+
+- (void)p_updateAfterPublicSettingsChange {
+    if (_collectionView != nil && _dataSource != nil) {
+        [self updateObjects:[[_dataSource objectsForListAdapter:self] copy]];
+    }
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 10;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 10;
+}
+
+
+#pragma mark - Private API
+
+// this method is what updates the "source of truth"
+// this should only be called just before the collection view is updated
+- (void)updateObjects:(NSArray *)objects {
+    
+#if DEBUG
+    for (id object in objects) {
+        GTAssert([object isEqual:object], @"Object instance %@ not equal to itself. This will break infra map tables.", object);
+    }
+#endif
+    NSMutableArray *sectionControllers = @[].mutableCopy;
+    
 }
 
 @end
