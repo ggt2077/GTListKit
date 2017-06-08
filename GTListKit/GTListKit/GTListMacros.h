@@ -17,3 +17,9 @@
 #ifndef GTLK_UNAVAILABLE
 #define GTLK_UNAVAILABLE(message) __attribute__((unavailable(message)))
 #endif
+
+#if GTLK_LOGGING_ENABLED
+#define GTLKLog( s, ... ) do { NSLog( @"GTListKit: %@", [NSString stringWithFormat: (s), ##__VA_ARGS__] ); } while(0)
+#else
+#define GTLKLog( s, ... )
+#endif
